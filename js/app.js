@@ -47,5 +47,26 @@ const { createApp } = Vue
             console.log("Ho cliccato sulla thumb numero ", thumbIndex + 1)
             this.currentIndex = thumbIndex;
         }
+    },
+    mounted() {
+        console.log("VUE OK");
     }
 }).mount('#app')
+
+
+// function nextImage() {
+//     currentIndex++;
+//     if (currentIndex > this.slides.length - 1) 
+//         currentIndex = 0;
+//     }
+//  const clock = setInterval(afterClickNextImage, 3000)
+
+// function afterClickNextImage () {
+//     this.currentIndex++;
+//             if (this.currentIndex > this.slides.length - 1) {
+//                 this.currentIndex = 0;
+//             }
+// }
+
+
+
