@@ -33,14 +33,14 @@ const { createApp } = Vue
     methods: {
         nextImage() {
             this.currentIndex++;
-            if (this.currentIndex > this.slides[currentIndex].image.length - 1) {
+            if (this.currentIndex > this.slides.length - 1) {
                 this.currentIndex = 0;
             }
         },
         prevImage() {
             this.currentIndex--;
             if (this.currentIndex < 0) {
-                this.currentIndex = this.slides[currentIndex].image.length - 1;
+                this.currentIndex = this.slides.length - 1;
             }
         },
         changeImage(thumbIndex) {
