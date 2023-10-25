@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        intervalId: null,
         currentIndex: 0,
         slides: [
                 {
@@ -46,6 +47,15 @@ const { createApp } = Vue
         changeImage(thumbIndex) {
             console.log("Ho cliccato sulla thumb numero ", thumbIndex + 1)
             this.currentIndex = thumbIndex;
+        },
+        autoScroll() {
+            this.intervalId = setInterval(() => {
+                this.nextImage();
+            }, 3000)
+        },
+        stopAutoScroll() {
+            clearInterval(this.intervalId);
+            this.intervalId = null;
         }
     },
     mounted() {
@@ -67,6 +77,7 @@ const { createApp } = Vue
 //                 this.currentIndex = 0;
 //             }
 // }
+
 
 
 
